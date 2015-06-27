@@ -133,6 +133,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             }
             $block.height(h + 'px');
             $block.width(w + 'px');
+            $block.addClass('size-' + $block.data('size'));
             return $block.css({
               'margin': settings.gutter
             });
@@ -217,6 +218,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
               }
               $filler = $("" + settings.filler.itemSelector).not("." + settings.filler.filler_class).eq(filler_index).clone(settings.filler.keepDataAndEvents);
               $filler.addClass(settings.filler.filler_class);
+              $filler.addClass("size-0");
               $filler.css({
                 position: 'absolute',
                 top: x + 'px',

@@ -246,6 +246,9 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 						$block.height(h + 'px')
 						$block.width(w + 'px')
+						
+						# Add the size as a class for further styling options
+						$block.addClass('size-' + $block.data('size'))
 
 						$block.css
 							'margin': settings.gutter
@@ -401,6 +404,9 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 							$filler = $("#{settings.filler.itemSelector}").not(".#{settings.filler.filler_class}").eq(filler_index).clone(settings.filler.keepDataAndEvents)
 
 							$filler.addClass(settings.filler.filler_class)
+
+							# All fillers are size-0, so append the class
+							$filler.addClass("size-0");
 
 							#
 							#	Position the filler 
